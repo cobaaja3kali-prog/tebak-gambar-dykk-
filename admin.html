@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin - Perpustakaan</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="header">
+  <div class="brand"><img src="img/logo.png" alt="Logo"><div class="title"><h1>PERPUSTAKAAN WIDYA WIYATA SMEPASDA</h1><p>SMP Negeri 2 Pasirian</p></div></div>
+  <div class="controls"><button class="icon-btn" onclick="location.href='index.html'">←</button><button id="menuBtn" class="icon-btn" onclick="toggleNav()">☰</button></div>
+</header>
+<nav id="navSide" class="nav-side"><a href="index.html">Home</a><a href="katalog.html">Katalog Buku</a><a href="berita.html">Berita</a><a href="about.html">About</a><a href="kontak.html">Kontak</a><a href="admin.html">Panel Admin</a></nav>
+
+<main class="container">
+  <div class="card">
+    <h2>Panel Admin</h2>
+    <div style="max-width:760px">
+      <div style="margin-bottom:14px" class="card">
+        <h3>Login Admin</h3>
+        <p style="color:var(--muted)">Masukkan password admin.</p>
+        <div style="display:flex;gap:8px">
+          <input id="adminPass" class="input" type="password" placeholder="Password admin">
+          <button class="btn" onclick="adminLogin()">Login</button>
+        </div>
+        <p style="margin-top:8px;color:var(--muted)">Password default: <strong>sm3pasd4</strong></p>
+      </div>
+
+      <div class="card" style="margin-top:10px">
+        <h3>Tambah / Edit Buku</h3>
+        <form id="bookForm">
+          <div class="form-row">
+            <input id="judul" class="input" placeholder="Judul buku">
+            <input id="penulis" class="input" placeholder="Penulis">
+          </div>
+          <div style="margin-top:8px">
+            <textarea id="deskripsi" class="input" placeholder="Deskripsi singkat"></textarea>
+          </div>
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center">
+            <input id="bookImage" type="file" accept="image/*">
+            <button class="btn" type="submit">Tambahkan Buku</button>
+          </div>
+        </form>
+      </div>
+
+      <div style="margin-top:12px">
+        <h3>Koleksi Buku Saat Ini</h3>
+        <div id="adminBookList" class="book-list" style="margin-top:8px"></div>
+      </div>
+
+      <div style="margin-top:18px" class="card">
+        <h3>Tambah / Edit Berita</h3>
+        <form id="newsForm">
+          <input id="newsTitle" class="input" placeholder="Judul berita">
+          <textarea id="newsExcerpt" class="input" placeholder="Ringkasan singkat"></textarea>
+          <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+            <input id="newsImage" type="file" accept="image/*">
+            <button class="btn" type="submit">Tambahkan Berita</button>
+          </div>
+        </form>
+        <div style="margin-top:12px">
+          <h4>Berita Saat Ini</h4>
+          <div id="adminNewsList"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer"><p>&copy; 2025 PERPUSTAKAAN WIDYA WIYATA SMEPASDA</p></footer>
+<script src="js/main.js"></script><script src="js/buku.js"></script><script src="js/berita.js"></script><script src="js/admin.js"></script>
+</body>
+</html>

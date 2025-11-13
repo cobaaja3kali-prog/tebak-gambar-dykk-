@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Katalog Buku - Perpustakaan</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="header">
+  <div class="brand"><img src="img/logo.png" alt="Logo"><div class="title"><h1>PERPUSTAKAAN WIDYA WIYATA SMEPASDA</h1><p>SMP Negeri 2 Pasirian</p></div></div>
+  <div class="controls"><button class="icon-btn" onclick="location.href='index.html'">←</button><button id="menuBtn" class="icon-btn" onclick="toggleNav()">☰</button></div>
+</header>
+<nav id="navSide" class="nav-side"><a href="index.html">Home</a><a href="katalog.html">Katalog Buku</a><a href="berita.html">Berita</a><a href="about.html">About</a><a href="kontak.html">Kontak</a><a href="admin.html">Panel Admin</a></nav>
+
+<main class="container">
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div><h2>📚 Katalog Buku</h2><p style="color:var(--muted)">Telusuri koleksi buku kami.</p></div>
+      <div class="search-row"><input id="q" placeholder="Cari judul atau penulis..." class="input"><button class="btn" onclick="doSearch()">Cari</button><button class="btn" style="background:#6b7280;margin-left:8px" onclick="resetSearch()">Reset</button></div>
+    </div>
+    <div id="bookList" class="book-list" style="margin-top:12px"></div>
+  </div>
+</main>
+
+<footer class="footer"><p>&copy; 2025 PERPUSTAKAAN WIDYA WIYATA SMEPASDA</p></footer>
+<script src="js/main.js"></script><script src="js/buku.js"></script><script>
+function doSearch(){ const q=document.getElementById('q').value.trim().toLowerCase(); const all=getBooks(); if(!q){ renderCatalog(all); return; } renderCatalog(all.filter(b=> (b.judul||'').toLowerCase().includes(q) || (b.penulis||'').toLowerCase().includes(q))); }
+function resetSearch(){ document.getElementById('q').value=''; renderCatalog(getBooks()); }
+document.addEventListener('DOMContentLoaded', ()=> renderCatalog(getBooks()));
+</script>
+</body>
+</html>

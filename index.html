@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PERPUSTAKAAN WIDYA WIYATA SMEPASDA</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header class="header">
+  <div class="brand">
+    <img src="img/10.jpg" alt="Logo" style="width:70px;height:70px;object-fit:cover;border-radius:8px">
+    <div class="title"><h1>PERPUSTAKAAN WIDYA WIYATA SMEPASDA</h1><p>SMP Negeri 2 Pasirian</p></div>
+  </div>
+  <div class="controls">
+    <button id="searchBtn" class="icon-btn" onclick="location.href='katalog.html'">🔍</button>
+    <button id="menuBtn" class="icon-btn" onclick="toggleNav()" aria-label="Menu">☰</button>
+  </div>
+</header>
+<nav id="navSide" class="nav-side" aria-hidden="true">
+  <section class="hero card">
+    <a href="index.html">Home</a>
+  </section>
+  <section class="hero card">
+    <a href="katalog.html">Katalog Buku</a>
+  </section>
+  <section class="hero card">
+    <a href="berita.html">Berita</a>
+  </section>
+  <section class="hero card">
+    <a href="about.html">About</a>
+  </section>
+  <section class="hero card">
+    <a href="kontak.html">Kontak</a>
+  </section>
+  <section class="hero card">
+    <a href="admin.html">Panel Admin</a>
+  </section>
+</nav>
+
+<main class="container">
+  <section class="hero card">
+    <img src="img/2.jpg" style="width:440px;height:250px;object-fit:cover;border-radius:8px">
+  </section>
+
+<main class="container">
+  <section class="hero card">
+      <div style="display:flex;flex-direction:column;justify-content:center">
+        <h2 style="margin:0;color:var(--blue-600)">Selamat datang di Perpustakaan</h2>
+        <p style="color:var(--muted)">Situs resmi Perpustakaan Widya Wiyata SMEPASDA — pusat sumber belajar dan literasi siswa.</p>
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button class="btn" onclick="location.href='katalog.html'">Lihat Katalog</button>
+          <button class="btn" style="background:#fff;color:var(--blue-600)" onclick="location.href='berita.html'">Informasi Terbaru</button>
+        </div>
+      </div>
+  </section>
+
+  <section style="margin-top:18px" class="card">
+    <div class="section-title"><h3 style="margin:0">Layanan Perpustakaan Widya Wiyata SMEPASDA</h3></div>
+    <p style="color:var(--muted)">Jelajahi layanan perpustakaan dan akses koleksi buku serta berita sekolah.</p>
+    <div class="icon-menu">
+      <div class="icon-item" onclick="location.href='katalog.html'"><div class="ic">📖</div><p>Katalog Buku</p></div>
+      <div class="icon-item" onclick="location.href='berita.html'"><div class="ic">📰</div><p>Berita</p></div>
+      <div class="icon-item" onclick="location.href='about.html'"><div class="ic">🏫</div><p>About</p></div>
+      <div class="icon-item" onclick="location.href='kontak.html'"><div class="ic">📬</div><p>Kontak</p></div>
+    </div>
+  </section>
+
+  <section style="margin-top:18px" class="card">
+    <h3>Informasi Terkini</h3>
+    <div style="display:flex;gap:12px;align-items:center;margin-top:10px">
+      <img src="img/placeholder.jpg" style="width:160px;height:100px;object-fit:cover;border-radius:8px">
+      <div><h4 style="margin:0;color:var(--blue-600)">Layanan sirkulasi buku kembali normal</h4><p style="margin:8px 0;color:var(--muted)">Perpustakaan kembali membuka layanan sirkulasi dan peminjaman dengan protokol kesehatan.</p></div>
+    </div>
+  </section>
+  
+  <section style="margin-top:18px" class="card">
+    
+    <div style="display:flex;gap:12px;align-items:center;margin-top:10px">
+      <img src="img/placeholder.jpg" style="width:160px;height:100px;object-fit:cover;border-radius:8px">
+      <div><h4 style="margin:0;color:var(--blue-600)">Layanan sirkulasi buku kembali normal</h4><p style="margin:8px 0;color:var(--muted)">Perpustakaan kembali membuka layanan sirkulasi dan peminjaman dengan protokol kesehatan.</p></div>
+    </div>
+  </section>
+  
+   <section style="margin-top:18px" class="card">
+    
+    <div style="display:flex;gap:12px;align-items:center;margin-top:10px">
+      <img src="img/firal wok.jpeg" style="width:160px;height:100px;object-fit:cover;border-radius:8px">
+      <div><h4 style="margin:0;color:var(--blue-600)"><a href="https://www.detik.com/sulsel/berita/d-8161918/fakta-fakta-kepala-sman-1-cimarga-tampar-siswa-gegara-ketahuan-merokok">kapsek tampar siswa merokok dikamar mandi</a></h4><p style="margin:8px 0;color:var(--muted)"></p></div>
+    </div>
+  </section>
+  
+  <section style="margin-top:18px" class="card">
+    <h3>Alamat</h3>
+        <p>Jl Gunung Tambuh No 1 Pasirian</p>
+        <h3>Email</h3>
+        <p>perpustakaan@smpasda.sch.id</p>
+        <h3>Telepon</h3>
+        <p>(0342) 123456</p>
+    </section>
+
+<footer class="footer"><p>&copy; 2025 PERPUSTAKAAN WIDYA WIYATA SMEPASDA</p></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
